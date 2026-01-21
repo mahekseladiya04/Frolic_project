@@ -3,6 +3,12 @@ import { lazy } from 'react';
 // project imports
 import Loadable from 'components/Loadable';
 import DashboardLayout from 'layout/Dashboard';
+import InstituteListPage from '../pages/extra-pages/InstituteListPage.jsx';
+import DepartmentListPage from '../pages/extra-pages/DepartmentListPage.jsx';
+import EventsListPage from '../pages/extra-pages/EventsListPage.jsx';
+import AddInstitute from '../pages/extra-pages/Institute/addInstitute.jsx';
+import AddDepartment from '../pages/extra-pages/Department/AddDepartment.jsx';
+import AddEvent from '../pages/extra-pages/Event/AddEvent.jsx';
 
 // render- Dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/default')));
@@ -49,7 +55,31 @@ const MainRoutes = {
     {
       path: 'sample-page',
       element: <SamplePage />
-    }
+    },
+    {
+      path: 'InstituteListPage',
+      element: <InstituteListPage />
+    },
+    {
+      path: 'DepartmentListPage',
+      element: <DepartmentListPage/>
+    },
+    {
+      path: 'EventsListPage',
+      element: <EventsListPage/>
+    },
+    {
+      path: 'InstituteListPage/add',
+      element: <AddInstitute/>
+    },
+    {
+      path: 'DepartmentListPage/add',
+      element: <AddDepartment/>
+    },
+    {
+      path: 'EventsListPage/add',
+      element: <AddEvent/>
+    },
   ]
 };
 
